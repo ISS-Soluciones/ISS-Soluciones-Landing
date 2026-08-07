@@ -39,7 +39,7 @@
     display: flex;
     list-style: none;
     justify-items: center;
-    gap: 20px;
+    gap: 26px;
     margin: 0;
     padding: 0;
 }
@@ -60,7 +60,7 @@
 }
 
 .nav-link:hover {
-    color: #17d34c;
+    color: #29892d;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -86,7 +86,7 @@ h2{
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   z-index: 1000;
-  width: max-content;
+  width: 800px;
   min-width: 650px;
 
   opacity: 0;
@@ -94,6 +94,12 @@ h2{
   transform: translateX(-50%) translateY(10px);
   pointer-events: none;
   transition: all 300ms ease;
+}
+
+@media (max-width   : 1090px) {
+  .dropdown-menu {
+    width: max-content;
+  }
 }
 
 /* Mostrar al hacer hover */
