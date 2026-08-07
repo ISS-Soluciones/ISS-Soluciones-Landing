@@ -1,7 +1,16 @@
+import { Carousel } from "../componentes/Carousel";
 import { Header } from "../componentes/Header";
+import "./Inicio.css";
 
-export function DashboardPage() {
+export function Inicio() {
     return (
-        <Header />
+        <>
+            <Header />
+            <div className="hero-container">
+                <Carousel />
+            </div>
+                
+        </>
+
     )
 }
