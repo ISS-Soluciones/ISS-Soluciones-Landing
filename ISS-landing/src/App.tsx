@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import { Header } from './componentes/Header'
+import { Footer } from './componentes/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -120,6 +121,7 @@ function App() {
         <section id="spacer"></section>
 
       </main>
+      <Footer />
     </>
   )
 }
