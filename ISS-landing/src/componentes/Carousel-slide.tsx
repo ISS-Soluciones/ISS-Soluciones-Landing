@@ -1,10 +1,8 @@
-export function CarouselSlide({ imgSrc }: { imgSrc: string }) {
+function CarouselSlide({ imgSrc }: { imgSrc: string }) {
     return(
-        <>  
-            <div className="carousel-slide">
-                <img src={imgSrc} alt="Image" />
-            </div>
-        </>
+        <img src={imgSrc} alt="Image" />
     )
 
 }
+
+export default CarouselSlide;
