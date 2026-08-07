@@ -5,11 +5,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #f8f8f8;
     width: 100%;
-    
 }
 
 .header-logo {
@@ -75,6 +73,12 @@ h2{
     font-weight: bold;
     color: #333;
     margin-right: 20px;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
 }
 
 .dropdown-menu {

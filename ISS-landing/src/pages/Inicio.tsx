@@ -1,7 +1,18 @@
+import { HeroCarousel }  from "../componentes/Carousel";
+import { Footer } from "../componentes/Footer";
 import { Header } from "../componentes/Header";
+import "./Inicio.css";
 
-export function DashboardPage() {
+export function Inicio() {
     return (
-        <Header />
+        <>
+            <Header />
+            <div className="carousel-container">
+                <HeroCarousel />
+            </div>
+            <Footer/>
+                
+        </>
+
     )
 }
