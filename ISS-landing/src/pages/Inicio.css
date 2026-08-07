@@ -15,6 +15,52 @@ body{
     width: 100%;
     overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: row;
+    display: block;
+}
+
+.carousel-container .carousel {
+    width: 100%;
+}
+
+.carousel-container .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container .carousel-item {
+    display: none;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-container .carousel-item.active {
+    display: block;
+}
+
+.carousel-container .carousel-item img {
+    display: block;
+    width: 100%;
+    height: min(580px, 60vw);
+    object-fit: cover;
+}
+
+.carousel-container .carousel-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.25rem 1rem 1.5rem;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.72));
+}
+
+.carousel-container .carousel-caption h3,
+.carousel-container .carousel-caption p {
+    color: #fff;
+}
+
+.carousel-container .carousel-indicators,
+.carousel-container .carousel-control-prev,
+.carousel-container .carousel-control-next {
+    z-index: 2;
 }
