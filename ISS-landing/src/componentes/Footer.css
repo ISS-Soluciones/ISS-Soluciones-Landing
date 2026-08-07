@@ -1,0 +1,208 @@
+/* Variables de color basadas en la paleta anterior para mantener el diseño */
+:root {
+  --footer-bg: #0f172a;       /* slate-900 */
+  --footer-text: #cbd5e1;     /* slate-300 */
+  --footer-text-muted: #94a3b8; /* slate-400 */
+  --footer-border: #1e293b;   /* slate-800 */
+  --footer-white: #ffffff;
+  --footer-primary: #2563eb;  /* blue-600 */
+  --footer-primary-hover: #60a5fa; /* blue-400 */
+  --footer-icon: #3b82f6;     /* blue-500 */
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* --- SECCIÓN PRINCIPAL (GRID) --- */
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Móvil: 1 columna */
+  gap: 2rem;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columnas */
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(5, 1fr); /* Escritorio: 5 columnas */
+  }
+  .footer-brand {
+    grid-column: span 2; /* La marca ocupa 2 columnas */
+  }
+}
+
+/* --- MARCA Y DESCRIPCIÓN --- */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-logo-icon {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--footer-primary);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--footer-white);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.footer-logo-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--footer-white);
+  letter-spacing: 0.025em;
+}
+
+.footer-description {
+  font-size: 0.875rem;
+  color: var(--footer-text-muted);
+  max-width: 24rem;
+  line-height: 1.625;
+}
+
+/* --- REDES SOCIALES --- */
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.social-link {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: var(--footer-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--footer-text);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: var(--footer-primary);
+  color: var(--footer-white);
+}
+
+.social-link svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+/* --- COLUMNAS DE ENLACES --- */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--footer-white);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-list a {
+  color: var(--footer-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.footer-list a:hover {
+  color: var(--footer-primary-hover);
+}
+
+/* --- COLUMNA DE CONTACTO --- */
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.contact-icon {
+  color: var(--footer-icon);
+}
+
+/* --- SUB-FOOTER (COPYRIGHT) --- */
+.footer-bottom {
+  border-top: 1px solid var(--footer-border);
+}
+
+.footer-bottom-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--footer-text-muted);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: var(--footer-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #e2e8f0; /* slate-200 */
+}
+
+/* Responsive Sub-footer */
+@media (min-width: 640px) {
+  .footer-bottom-container {
+    flex-direction: row;
+  }
+}
