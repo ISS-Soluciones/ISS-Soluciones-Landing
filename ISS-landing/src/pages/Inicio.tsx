@@ -93,7 +93,7 @@ export function Inicio() {
                         </div>
                         <div className="back">
                             <p>Brindamos un trato especializado y personalizado a cada uno de nuestros clientes. 
-                                Nuestro objetivo es hacer realidad la visión de tu negocio, y nuestra prioridad siempre será tu satisfacción.
+                              Nuestro objetivo es hacer realidad la visión de tu negocio, y nuestra prioridad siempre será tu satisfacción.
                             </p>
                         </div>
                     </div>
