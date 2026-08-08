@@ -3,6 +3,7 @@ import CarouselSlide from './Carousel-slide';
 import carrousel1 from '../assets/carrousel1.jpg';
 import carrousel2 from '../assets/carrousel2.jpg';
 import carrousel3 from '../assets/carrousel3.jpg';
+import '../estilos/Carousel.css';
 
 type Position = 'left' | 'center' | 'right';
 

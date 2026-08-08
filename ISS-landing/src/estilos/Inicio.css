@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Oxygen:wght@300;400;700&display=swap');
+
+.main-content {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* --- SECCIÓN SOBREPUESTA --- */
+
+.featured-cards-section {
+  position: relative;
+  z-index: 10; /* Eleva las tarjetas por encima del carrusel */
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  /* Margen negativo que empuja la sección hacia arriba sobre la imagen del Hero */
+  margin-top: -90px; 
+  padding-top: 40px;
+}
+
+.featured-cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+/* --- ESTILO DE CADA TARJETA --- */
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(230, 230, 230, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenedor del ícono circular naranja */
+.card-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #e9f7e7; /* Fondo suave */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.card-icon {
+  color: #006c0f;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.35;
+  margin: 0 0 0.85rem 0;
+  text-align: left;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1; /* Mantiene los botones alineados abajo */
+  text-align: left;
+}
+
+/* Botón circular con flecha */
+.card-action-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.342);
+  background: #0b6317cb;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.card-action-btn:hover {
+  background: #0b631796;
+  transform: scale(1.05);
+}
+
+/* --- RESPONSIVIDAD (Adaptación a pantallas pequeñas) --- */
+
+@media (max-width: 1024px) {
+  .featured-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-cards-section {
+    margin-top: -60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-cards-container {
+    grid-template-columns: 1fr;
+  }
+  .featured-cards-section {
+    margin-top: -40px;
+  }
+}
+
+/* --- ESTILO DE LAS FLIPCARDS --- */
+
+.valores-flipcards {
+    height: 420px;
+    padding-top: 80px;
+    margin-top: 200px;
+    background-color: #F6F7F9;
+}
+
+.boxesContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+}
+
+.cardBox:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  cursor: default;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  display: block;
+  height: 310px;
+  padding: 0.8em;
+  width: 100%;
+  position: absolute;
+  
+  font-family: 'Oxygen', sans-serif;
+  color: rgb(2, 2, 2);
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flipcard-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.back {
+  transform: rotateY( 180deg);
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 80%;
+
+  font-weight: 200;
+  font-size: 0.8em;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+ 
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+
+  .card {
+    height: 285px;
+  }
+
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .cardBox {
+    width: 94.5%;
+    height: 290px;
+  }
+
+}

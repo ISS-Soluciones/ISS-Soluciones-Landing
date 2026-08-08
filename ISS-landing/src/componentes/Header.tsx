@@ -1,5 +1,5 @@
 import { DatabaseZap } from "lucide-react";
-import "./Header.css";
+import "../estilos/Header.css";
 
 export function Header(){
     return (

@@ -3,7 +3,7 @@ import { MapPin } from "lucide-react";
 import { Send } from "lucide-react";
 import { PhoneCall } from "lucide-react";
 
-import './Footer.css';
+import '../estilos/Footer.css';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
