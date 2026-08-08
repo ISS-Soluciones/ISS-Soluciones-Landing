@@ -157,6 +157,8 @@
   width: 100%;
   -webkit-animation: giro 1s 1;
   animation: giro 1s 1;
+  display: flex;
+  justify-content: center;
 }
 
 .front, .back {
