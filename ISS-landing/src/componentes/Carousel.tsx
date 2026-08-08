@@ -4,10 +4,13 @@ import carrousel1 from '../assets/carrousel1.jpg';
 import carrousel2 from '../assets/carrousel2.jpg';
 import carrousel3 from '../assets/carrousel3.jpg';
 
+type Position = 'left' | 'center' | 'right';
+
 type Slide = {
   imgSrc: string;
   title: string;
   description: string;
+  position?: Position;
 };
 
 const slides: Slide[] = [
@@ -15,16 +18,19 @@ const slides: Slide[] = [
     imgSrc: carrousel1,
     title: 'Software hecho a tu medida',
     description: 'No importa el tamaño de tu negocio, nuestro equipo es capaz de ofrecerte una solución personalizada que se adapte a tus necesidades y presupuesto, acompañandote en cada paso del proceso.',
+    position: 'left',
   },
   {
     imgSrc: carrousel2,
     title: 'Soporte técnico virtual y presencial',
     description: 'Nuestra red de ingenieros altamente capacitados estarán a tu completa disposición para ofrecerte soporte técnico y mantenimiento de tus sistemas, asegurando que tu negocio funcione sin problemas.',
+    position: 'center',
   },
   {
     imgSrc: carrousel3,
     title: 'Mantenimiento de equipos y redes',
     description: '¿Problemas con algún dispositivo? Contamos con técnicos especializados que llegarán a donde los necesites para realizar el mantenimiento o reparaciones correspondientes y dejarán tus equipos como nuevos.',
+    position: 'right',
   },
 ];
 
@@ -34,7 +40,7 @@ export function HeroCarousel() {
   useEffect(() => {
     const intervalId = window.setInterval(() => {
       setActiveIndex((currentIndex) => (currentIndex + 1) % slides.length);
-    }, 3500);
+    }, 4500);
 
     return () => window.clearInterval(intervalId);
   }, []);
@@ -56,15 +62,23 @@ export function HeroCarousel() {
           className="hero-carousel__track"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
-          {slides.map((slide, index) => (
-            <article className="hero-carousel__slide" key={slide.title} aria-hidden={index !== activeIndex}>
-              <CarouselSlide imgSrc={slide.imgSrc} />
-              <div className="hero-carousel__caption">
-                <h3>{slide.title}</h3>
-                <p>{slide.description}</p>
-              </div>
-            </article>
-          ))}
+          {slides.map((slide, index) => {
+            const positionClass = `hero-carousel__caption--${slide.position ?? 'center'}`;
+
+            return (
+              <article 
+                className="hero-carousel__slide" 
+                key={slide.title} 
+                aria-hidden={index !== activeIndex}
+              >
+                <CarouselSlide imgSrc={slide.imgSrc} />
+                <div className={`hero-carousel__caption ${positionClass} ${index === activeIndex ? 'is-active' : ''}`}>
+                  <h3>{slide.title}</h3>
+                  <p>{slide.description}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
 
