@@ -41,7 +41,7 @@ export function HeroCarousel() {
   useEffect(() => {
     const intervalId = window.setInterval(() => {
       setActiveIndex((currentIndex) => (currentIndex + 1) % slides.length);
-    }, 4500);
+    }, 6500);
 
     return () => window.clearInterval(intervalId);
   }, []);
