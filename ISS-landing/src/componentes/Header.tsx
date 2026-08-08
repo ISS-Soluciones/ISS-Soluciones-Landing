@@ -42,17 +42,17 @@ export function Header(){
                                 </div>
                                 <div className="dropdown-column digitales">
                                     <div className="column-header">
-                                        <span className="badge-bar border-red"></span>
+                                        <span className="badge-bar border-green"></span>
                                         <h2>Servicios Digitales</h2>
                                     </div>
                                     <div className="services-list">
                                         <ul className="list-container">
-                                            <li className="card-wrapper">Diseño Web</li>
-                                            <li className="card-wrapper">Hosting y Dominios</li>
-                                            <li className="card-wrapper">Apps Móviles (Android)</li>
-                                            <li className="card-wrapper">Apps Web (API)</li>
-                                            <li className="card-wrapper">Programas de baja y mediana escala</li>
-                                            <li className="card-wrapper">Soporte Técnico (Virtual)</li>
+                                            <li className="card-wrapper green">Diseño Web</li>
+                                            <li className="card-wrapper green">Hosting y Dominios</li>
+                                            <li className="card-wrapper green">Apps Móviles (Android)</li>
+                                            <li className="card-wrapper green">Apps Web (API)</li>
+                                            <li className="card-wrapper green">Programas de baja y mediana escala</li>
+                                            <li className="card-wrapper green">Soporte Técnico (Virtual)</li>
                                         </ul>
                                     </div>
                                 </div>

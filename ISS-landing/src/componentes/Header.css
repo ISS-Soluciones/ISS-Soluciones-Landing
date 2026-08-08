@@ -5,7 +5,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -4px 20px 4px #2563eb;
+    z-index: 1000;
     background-color: #f8f8f8;
     width: 100%;
 }
@@ -152,8 +153,8 @@ h2{
   background-color: #3b82f6;
 }
 
-.border-red {
-  background-color: #ef4444;
+.border-green {
+  background-color: #10b981;
 }
 
 .column-header h2 {
@@ -183,6 +184,15 @@ h2{
   font-family: "Oxygen", sans-serif;
   font-size: 0.95rem;
   color: #717171;
+}
+
+.card-wrapper.green:hover {
+    border-color: #10b981;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+
+    font-weight: bold;
+    color: #10b981;
 }
 
 .card-wrapper:hover {

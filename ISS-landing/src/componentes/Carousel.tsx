@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import CarouselSlide from './Carousel-slide';
-import sampleHero from '../assets/sample-hero.png';
+import carrousel1 from '../assets/carrousel1.jpg';
+import carrousel2 from '../assets/carrousel2.jpg';
+import carrousel3 from '../assets/carrousel3.jpg';
 
 type Slide = {
   imgSrc: string;
@@ -10,19 +12,19 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    imgSrc: sampleHero,
-    title: 'Foto principal',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    imgSrc: carrousel1,
+    title: 'Software hecho a tu medida',
+    description: 'No importa el tamaño de tu negocio, nuestro equipo es capaz de ofrecerte una solución personalizada que se adapte a tus necesidades y presupuesto, acompañandote en cada paso del proceso.',
   },
   {
-    imgSrc: sampleHero,
-    title: 'Secundario',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    imgSrc: carrousel2,
+    title: 'Soporte técnico virtual y presencial',
+    description: 'Nuestra red de ingenieros altamente capacitados estarán a tu completa disposición para ofrecerte soporte técnico y mantenimiento de tus sistemas, asegurando que tu negocio funcione sin problemas.',
   },
   {
-    imgSrc: sampleHero,
-    title: 'Tercero',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    imgSrc: carrousel3,
+    title: 'Mantenimiento de equipos y redes',
+    description: '¿Problemas con algún dispositivo? Contamos con técnicos especializados que llegarán a donde los necesites para realizar el mantenimiento o reparaciones correspondientes y dejarán tus equipos como nuevos.',
   },
 ];
 

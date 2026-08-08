@@ -46,7 +46,7 @@ body{
 .hero-carousel__slide img {
     display: block;
     width: 100%;
-    height: min(580px, 60vw);
+    height: min(700px, 60vw);
     object-fit: cover;
 }
 
