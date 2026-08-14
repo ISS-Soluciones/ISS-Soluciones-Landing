@@ -1,0 +1,97 @@
+.services-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15%;
+}
+
+.column-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-width: 295px;
+}
+
+.column-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333333;
+    margin: 5px 0px;
+}
+
+.card-wrap {
+    padding: 8px 12px;
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #f5f5f5;
+    width: 95%;
+    font-family: "Oxygen", sans-serif;
+    font-size: 0.95rem;
+    color: #717171;
+}
+
+.card-wrap:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+    background-color: #83818128;
+    font-weight: normal;
+}
+
+.list-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #f5f5f5;
+    padding-left: 0px;
+    width: auto;
+}
+
+.list-contain.sub-list {
+    width: 90%;
+}
+
+.toggle-button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: center;
+}
+
+.toggle-button.open {
+    font-weight: bold;
+}
+
+.list-capacitacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #f5f5f5;
+    width: 100%;
+    padding-left: 0px;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.list-capacitacion .card-wrap {
+    width: 100%;
+}

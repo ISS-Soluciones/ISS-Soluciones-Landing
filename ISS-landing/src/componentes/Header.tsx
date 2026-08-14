@@ -1,4 +1,6 @@
 import { DatabaseZap } from "lucide-react";
+import { Link } from "react-router-dom";
+
 import "../estilos/Header.css";
 
 export function Header(){
@@ -16,9 +18,9 @@ export function Header(){
                         </a>
                     </li>
                     <li className="menu-item has-dropdown">
-                        <a title="Servicios" href="/servicios" className="nav-link">
+                        <Link to="/ISS-Soluciones-Landing/Servicios" className="nav-link">
                             Servicios
-                        </a>
+                        </Link>
                         
                         <div className="dropdown-menu">
                             <div className="dropdown-container">
@@ -60,19 +62,19 @@ export function Header(){
                         </div>
                     </li>
                     <li className="menu-item">
-                        <a href="/blog" className="nav-link">
+                        <Link to="/ISS-Soluciones-Landing/blog" className="nav-link">
                             Blog
-                        </a>
+                        </Link>
                     </li>
                     <li className="menu-item">
-                        <a href="/sobre-nosotros" className="nav-link">
+                        <Link to="/ISS-Soluciones-Landing/sobre-nosotros" className="nav-link">
                             Sobre Nosotros
-                        </a>
+                        </Link>
                     </li>
                     <li className="menu-item">
-                        <a href="/contacto" className="nav-link">
+                        <Link to="/ISS-Soluciones-Landing/contacto" className="nav-link">
                             Contacto
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
